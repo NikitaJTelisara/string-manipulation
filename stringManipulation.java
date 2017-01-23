@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class stringManipulation {
 
     public static void main(String[] args) {
-        public static void main(String[] args) {
+        
         /* check if all characters in a String are Unique */
         /* 1.1*/
         String str = "abchdesds";
