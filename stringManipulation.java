@@ -133,6 +133,32 @@ public class stringManipulation {
         }
         return (n);
     }
+    
+     /* fill empty space with "%20 */
+    /*bad way*/
+    public static void fillSpaceBetter(char[] str) {
+        int count = 0;
+        for (int i = 0; i <= str.length - 1; i++) {
+            if (str[i] == ' ') {
+                count++;
+            }
+        }
+        int newLength = str.length + count * 2;
+        char[] newArr = new char[newLength];
+        for (int i = str.length - 1; i >= 0; i--) {
+            if (str[i] == ' ') {
+                newArr[newLength - 1] = '0';
+                newArr[newLength - 2] = '2';
+                newArr[newLength - 3] = '%';
+                newLength = newLength - 3;
+            } else {
+                newArr[newLength - 1] = str[i];
+                newLength = newLength - 1;
+            }
+
+        }
+        System.out.println(newArr);
+    }
 
     /* compress a string */
     public static String compressStr(String s) {
