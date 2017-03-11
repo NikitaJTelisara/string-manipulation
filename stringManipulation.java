@@ -1,11 +1,5 @@
 import java.util.Arrays;
 
-/**
- * Created with IntelliJ IDEA.
- * Date: 7/27/16
- * Time: 10:44 PM
- * To change this template use File | Settings | File Templates.
- */
 public class stringManipulation {
 
     public static void main(String[] args) {
