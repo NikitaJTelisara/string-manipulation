@@ -119,6 +119,7 @@ public class stringManipulation {
     }
 
     /* fill empty space with "%20 */
+    /*bad way*/
     public static String fillSpace(String s) {
         String n = new String();
         for (int i = 1; i < s.length(); i++) {
