@@ -113,7 +113,8 @@ public class stringManipulation {
         if (string1.length() != string2.length()) {
             return false;
         }
-        return (Sort(string1).equals(Sort(string2)));
+        //return (Sort(string1).equals(Sort(string2)));
+         return (Arrays.equals(Sort(string1),Sort(string2)));
     }
 
     public static char[] Sort(String string) {
