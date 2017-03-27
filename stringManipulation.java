@@ -135,7 +135,6 @@ public class stringManipulation {
     }
     
      /* fill empty space with "%20 */
-    /*bad way*/
     public static void fillSpaceBetter(char[] str) {
         int count = 0;
         for (int i = 0; i <= str.length - 1; i++) {
