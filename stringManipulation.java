@@ -1,9 +1,10 @@
 import java.util.Arrays;
+import java.util.Hashtable;
 
 public class stringManipulation {
 
-    public static void main(String[] args) {
-        
+    public static void main(String args[]) {
+
         /* check if all characters in a String are Unique */
         /* 1.1*/
         String str = "abchdesds";
@@ -74,6 +75,11 @@ public class stringManipulation {
         System.out.print("\n");
         s2 = "terpa";
         checkStringRotation(s1, s2);
+
+        String str1 = "edd";
+        String str4 = "bgg";
+        System.out.println("is Isomorphic :" + isIsomorphic(str1, str4));
+
     }
 
     /* check if all characters in a String are Unique */
@@ -108,7 +114,7 @@ public class stringManipulation {
             return false;
         }
         //return (Sort(string1).equals(Sort(string2)));
-         return (Arrays.equals(Sort(string1),Sort(string2)));
+        return (Arrays.equals(Sort(string1), Sort(string2)));
     }
 
     public static char[] Sort(String string) {
@@ -133,8 +139,8 @@ public class stringManipulation {
         }
         return (n);
     }
-    
-     /* fill empty space with "%20 */
+
+    /* fill empty space with "%20 */
     public static void fillSpaceBetter(char[] str) {
         int count = 0;
         for (int i = 0; i <= str.length - 1; i++) {
@@ -277,9 +283,22 @@ public class stringManipulation {
         } else {
             System.out.print(s2 + " is not rotation of " + s1);
         }
-
     }
 
-
-
+    public static boolean isIsomorphic(String s, String t) {
+        Hashtable<Character, Character> hash = new Hashtable<Character, Character>();
+        for (int i = 0; i < s.length(); i++) {
+            Character s1 = s.charAt(i);
+            Character t1 = t.charAt(i);
+            if (!hash.containsKey(s1) && !hash.containsValue(t1)) {
+                hash.put(s1, t1);
+            } else {
+                Character c = hash.get(s1);
+                if (t1 != c) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
