@@ -96,7 +96,7 @@ public class stringManipulation {
             charset[val] = true;
         }
         return true;
-    }/* can either use hashset too */
+    }/* cannot use hashset, as it does not allow duplicate */
 
     /* reverse a string */
     public static String stringReversal(String string) {
