@@ -129,8 +129,7 @@ public class stringManipulation {
             begin--;
             end++;
         }
-        String str = new String(s);
-        return str;
+        return new String(s);
     }
     */
 
