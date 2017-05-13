@@ -107,6 +107,32 @@ public class stringManipulation {
         }
         return reversedStr;
     }
+    
+    /* better
+    public static String reverseString(String str) {
+        int strLength = str.length() % 2;
+        int i = str.length() / 2;
+        if (strLength == 0) {
+            return swapItems(i - 1, i, str.toCharArray());
+        } else {
+            return swapItems(i, i, str.toCharArray());
+        }
+    }
+
+    public static String swapItems(int i, int j, char[] s) {
+        int begin = i;
+        int end = j;
+        while (begin >= 0 && end <= s.length && begin <= end) {
+            char temp = s[begin];
+            s[begin] = s[end];
+            s[end] = temp;
+            begin--;
+            end++;
+        }
+        String str = new String(s);
+        return str;
+    }
+    */
 
     /* check if one string is permutation of another */
     public static boolean isPermutation(String string1, String string2) {
