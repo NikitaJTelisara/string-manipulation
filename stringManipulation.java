@@ -145,6 +145,7 @@ public class stringManipulation {
     public static char[] Sort(String string) {
         char[] arr1 = string.toCharArray();
         Arrays.sort(arr1);
+        /* Arrays.sort use quick sort with nlogn comp, can either compress the string and compare as linear takes n complexity */ 
         System.out.print(arr1);
         return arr1;
     }
