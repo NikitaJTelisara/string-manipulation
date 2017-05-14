@@ -144,11 +144,38 @@ public class stringManipulation {
 
     public static char[] Sort(String string) {
         char[] arr1 = string.toCharArray();
-        Arrays.sort(arr1);
-        /* Arrays.sort use quick sort with nlogn comp, can either compress the string and compare as linear takes n complexity */ 
+        Arrays.sort(arr1); 
         System.out.print(arr1);
         return arr1;
     }
+    /* Arrays.sort use quick sort with nlogn comp, can either compress the string and compare as linear takes n complexity 
+    public static boolean isPerm(String str, String str1) {
+        if(str.length() != str1.length()){
+            return false;
+        }
+        Hashtable resultHash1 = compressStr(str);
+        Hashtable resultHash2 = compressStr(str1);
+        if(resultHash1.size() != resultHash2.size()){
+            return false;
+        }
+        Set <Character> keySet = resultHash1.keySet();
+        for(Character c : keySet){
+            if((resultHash1.get(c) != resultHash2.get(c))){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static Hashtable<Character, Integer> compressStr(String str) {
+        Hashtable resultHash = new Hashtable<Character, Integer>();
+        for (int i = 0; i < str.length(); i++) {
+            Integer val =(Integer) resultHash.get(str.charAt(i));
+            resultHash.put(str.charAt(i), resultHash.containsKey(str.charAt(i)) ? val + 1 : 1);
+        }
+        return (resultHash);
+    }
+    
 
     /* fill empty space with "%20 */
     /*bad way*/
