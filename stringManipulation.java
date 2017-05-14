@@ -211,6 +211,7 @@ public class stringManipulation {
         newStr += count;
         return (newStr);
     }
+    /* works for aabbbcc, not for abaabs */
 
     /* rotate a matrix */
     public static void printMatrix(int[][] m) {
