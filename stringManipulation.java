@@ -217,6 +217,30 @@ public class stringManipulation {
         }
         System.out.println(newArr);
     }
+    /*
+    public static String fillSpaceBetter(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
+                count++;
+            }
+        }
+        int newLength = str.length() + count * 2;
+        char[] result = new char[newLength];
+        for (int i = str.length()-1; i >= 0; i--) {
+            if (str.charAt(i) == ' ') {
+                result[newLength - 1] = '0';
+                result[newLength - 2] = '2';
+                result[newLength - 3] = '%';
+                newLength -= 3;
+            } else {
+                result[newLength - 1] = str.charAt(i);
+                newLength -= 1;
+            }
+        }
+        return new String(result);
+    }
+    */
 
     /* compress a string */
     public static String compressStr(String s) {
