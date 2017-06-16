@@ -63,3 +63,5 @@ public class zigzag {
         return numCol;
     }
 }
+
+/*output pahnaplsiigyir */
