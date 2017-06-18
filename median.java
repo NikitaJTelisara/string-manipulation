@@ -1,6 +1,3 @@
-import java.util.HashSet;
-import java.util.Hashtable;
-
 public class median {
     public static void main(String[] args) {
         int[] e = {1, 2};
