@@ -263,6 +263,11 @@ public class stringManipulation {
         return (newStr);
     }
     /* works for aabbbcc, not for abaabs */
+    /* for abcalla 
+    step 1 = Array.sort() = quicksort = O(nlog(n))
+    step 2 = the above linear method =  O(n)
+    O(nlogn) + O(n) = O(nlogn) //For Big O complexity, all you care about is the dominant term.  n log(n) dominates n so that's 
+    the only term that you care about.
 
     /* rotate a matrix */
     public static void printMatrix(int[][] m) {
